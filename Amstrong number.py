@@ -1,37 +1,65 @@
 #Code by Shreyank #Github-https://github.com/Shreyankkarjigi
-#problem: Wap to check amstrong number
-
-#input number from user
-n=int(input("Enter number:\n"))
-
-#initialize sum as 0
-
-sum=0
-
-#store n in a temp variable, all operation occurs on temp variable and not on original number
-temp=n
-#initalise a while loop
-
-while temp>0:
-
-    #separate the digits using reminder method
-
-    digits=temp%10
-
-    #compute the digit power 3
-
-    sum=sum+digits**3
-
-    #divide the original number by 10 to convert it for next iteration
-
-    temp=temp//10
+#problem: Wap for a shopping cart
+#take total items from user
+#if item price is above or equal give 20% discount
+#display the item quantity and its price
+#display total bill
 
 
-    #check if temp==sum if yes print amstrong else not
+
+n=int(input("enter total items"))
+list_quantity=[]
+list_price=[]
+list_100=[]
+list_not100=[]
+
+#input quantity
+
+for i in range(n):
+    quan=int(input("enter quantity"))
+
+    #append to list_quantity
+
+    list_quantity.append(quan)
+
+    #display items
+
+print("quanity summary:")
+print(list_quantity)
+
+#input price
+#direct check price for above = 100
+#if above equal 100 append to list_100 else append to list_not 100
+#apply 20 % discount directly 
+
+for j in range(n):
+
+    price=int(input("enter price of items"))
+
+    if price>=100:
+        print("prices above or equal to 100 INR detected,applying 20 percent discount")
+        new_price= price//10 * 2
+
+        #append this to list_100 above
+
+        list_100.append(new_price)
+     
+
+    else:
+        list_not100.append(price)
+
+        
+
+total=sum(list_100+list_not100)
 
 
-if n==sum:
-   print("amstrong")
-    
-else:
-    print("not")
+print("total bill to be paid",total,"INR")
+print("Thank you for shopping with us, hope to never see you again :)")
+
+
+'''
+output
+
+
+
+'''
