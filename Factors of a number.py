@@ -13,8 +13,6 @@ for i in range(1,n+1):
 
 '''
 output
-
-
 enter number:
 320
 1
@@ -31,6 +29,4 @@ enter number:
 80
 160
 320
-
-
 '''
